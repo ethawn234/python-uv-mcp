@@ -1,0 +1,25 @@
+{
+	"servers": {
+		"github": {
+			"url": "https://api.githubcopilot.com/mcp/"
+		},
+		"file_explorer": {
+			"name": "File Explorer", // local MCP server
+			"transport": {
+				"type": "stdio",
+				"command": "python",
+				"args": [
+					"C:\\Users\\obd1\\_scripts\\hello_world.py"
+				] // This is an example, we'll use a real server in the next unit
+			},
+			"get_weather": {
+				"name": "Weather API",
+				"transport": {
+					"type": "sse",
+					"url": "https://example.com/mcp-server" // This is an example, we'll use a real server in the next unit
+				}
+			}
+		},
+		"inputs": []
+	}
+}
