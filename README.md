@@ -1,24 +1,16 @@
-# [Demo MCP SDK](https://huggingface.co/learn/mcp-course/unit1/sdk)
+# [Gradio & MCP](https://huggingface.co/learn/mcp-course/unit1/gradio-mcp)
 
-## Quickstart (python)
+## Quickstart
 
-1. Install ***uv*** package manager.
+1. Add gradio with MCP: `uv add "gradio[mcp]"`
+2. Start app: `py server.py`
 
-2. Install dependencies with uv:
+### Features
 
-      `uv add "mcp[cli]"`
+#### Gradio with MCP
+- provides quick scaffolding of MCP capability
+- provides human friendly UI and AI accessible tool
 
-3. Start the server (filename must be exact):
-
-    `mcp dev server.py`
-
-
-### Explore Quickstart MCP Server
-- Ignore error output (not significant)
-- Bottom Center Panel: lists history of commands (eg connection initialization, resource list, etc)
-- Top Menu Bar (`Resources`, `Prompts`, `Tools`, etc):
-  
-  1. Click on `Tools` to return available capabilities (`get_weather`).
-  2. Demo code returns hardcoded string with user input for `location`. 
-
-  - Note: The terminal will log commands that have run.
+#### Interfaces
+- As MCP Server: http://127.0.0.1:7860/gradio_api/mcp/sse
+- As web ui: http://127.0.0.1:7860
