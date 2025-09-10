@@ -1,27 +1,30 @@
-from mcp.server.fastmcp import FastMCP
+import gradio as gr
 
-# Create an MCP server
-mcp = FastMCP("Weather Service")
+def letter_counter(word: str, letter: str) -> int:
+    """
+    Count the number of occurrences of a letter in a word or text.
 
-# Tool implementation
-@mcp.tool()
-def get_weather(location: str) -> str:
-    """Get the current weather for a specified location."""
-    return f"Weather in {location}: Sunny, 72°F"
+    Args:
+        word (str): The input text to search through
+        letter (str): The letter to search for
 
-# Resource implementation
-@mcp.resource("weather://{location}")
-def weather_resource(location: str) -> str:
-    """Provide weather data as a resource."""
-    return f"Weather data for {location}: Sunny, 72°F"
+    Returns:
+        int: The number of times the letter appears in the text
+    """
+    word = word.lower()
+    letter = letter.lower()
+    count = word.count(letter)
+    return count
 
-# Prompt implementation
-@mcp.prompt()
-def weather_report(location: str) -> str:
-    """Create a weather report prompt."""
-    return f"""You are a weather reporter. Weather report for {location}?"""
+# Create a standard Gradio interface
+demo = gr.Interface(
+    fn=letter_counter,
+    inputs=["textbox", "textbox"],
+    outputs="number",
+    title="Letter Counter",
+    description="Enter text and a letter to count how many times the letter appears in the text."
+)
 
-
-# Run the server
+# Launch both the Gradio web interface and the MCP server
 if __name__ == "__main__":
-    mcp.run()
+    demo.launch(mcp_server=True)
