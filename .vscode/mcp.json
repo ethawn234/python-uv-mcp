@@ -1,0 +1,8 @@
+{
+	"inputs": [],
+	"servers": {
+		"gradio":{
+			"url": "https://tungkhuam-mcp-sentiment.hf.space/gradio_api/mcp/"
+		}
+	}
+}
