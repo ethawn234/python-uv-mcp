@@ -2,19 +2,20 @@
 
 ## Create & Use custom MCP server with Gradio
 
-**At a high-level**, custom MCP servers with gradio can be [deployed](https://huggingface.co/learn/mcp-course/unit2/gradio-server#deploying-to-hugging-face-spaces) to a remote like [Hugging Face Spaces](huggingface.co/spaces) which will auto-build and host your MCP server. Only needs a file named `app.py` and `requirements.txt` to transform your functions into MCP tools.
+Custom MCP servers with Gradio can be [deployed](https://huggingface.co/learn/mcp-course/unit2/gradio-server#deploying-to-hugging-face-spaces) to a remote like [Hugging Face Spaces](huggingface.co/spaces) which will auto-build and host your MCP server. Only needs a file named `app.py` and `requirements.txt` to transform your functions into MCP tools.
 
-Hugging Face Spaces work similarly to GitHub repos.
+  *Hugging Face Spaces work similarly to GitHub repos.*
 
 Once deployed, your custom MCP server is available at `https://YOUR_USERNAME-mcp-sentiment.hf.space/gradio_api/mcp/sse` and ready for use.
 
 Add your custom MCP to your `mcp.json` and click "Start the server" option above the MCP server's name. In Copilot Chat, open `Configure Tools...` and the custom MCP server will be listed along with any tools.
 
-Reference the tool Copilot should use `#mcp_sentiment_sentiment_analysis`. 
+Reference the tool in Copilot Chat: `#mcp_sentiment_sentiment_analysis`. 
 
 Tool naming convention: `<Hugging-Face-Space-Name>_<function-name>`.
 
 ### Example:
+*MCP built for this project: https://huggingface.co/spaces/tungkhuam/mcp-sentiment*
 
 1. User enters Prompt:
     
