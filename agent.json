@@ -1,0 +1,13 @@
+{
+    "name": "playwright-agent",
+    "description": "Agent with Playwright MCP server",
+    "model": "llama3.2:latest",
+    "provider": "auto",
+    "servers": [
+        {
+            "type": "stdio",
+            "command": "npx",
+            "args": ["@playwright/mcp@latest"]
+        }
+    ]
+}
