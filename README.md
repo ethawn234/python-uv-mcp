@@ -22,3 +22,7 @@
   2. Demo code returns hardcoded string with user input for `location`. 
 
   - Note: The terminal will log commands that have run.
+
+### Deploy your mcp server
+In order to enable others to use your MCP server, it must be deployed somewhere like **[Hugging Face Spaces](https://huggingface.co/learn/mcp-course/unit2/gradio-server#deploying-to-hugging-face-spaces)**.
+
