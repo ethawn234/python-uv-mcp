@@ -1,24 +1,12 @@
-# [Demo MCP SDK](https://huggingface.co/learn/mcp-course/unit1/sdk)
+# [Tiny Agents Clients](https://huggingface.co/learn/mcp-course/unit1/mcp-clients?env-variables=python#tiny-agents-clients)
 
-## Quickstart (python)
+You can also use tiny agents as MCP Clients to connect directly to MCP servers from your code. Tiny agents provide a simple way to create AI agents that can use tools from MCP servers.
 
-1. Install ***uv*** package manager.
+Tiny Agent can run MCP servers with a command line environment. 
 
-2. Install dependencies with uv:
+## Quickstart
 
-      `uv add "mcp[cli]"`
+- Need Hugging Face access. Use `hf auth whoami` to check login status.
 
-3. Start the server (filename must be exact):
-
-    `mcp dev server.py`
-
-
-### Explore Quickstart MCP Server
-- Ignore error output (not significant)
-- Bottom Center Panel: lists history of commands (eg connection initialization, resource list, etc)
-- Top Menu Bar (`Resources`, `Prompts`, `Tools`, etc):
-  
-  1. Click on `Tools` to return available capabilities (`get_weather`).
-  2. Demo code returns hardcoded string with user input for `location`. 
-
-  - Note: The terminal will log commands that have run.
+- Run the Tiny Agent MCP Client: `tiny-agents run .\agent.json`.
+  * Currently fails due to invalid `model` selection in `agent.json`.
