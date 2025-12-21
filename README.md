@@ -1,5 +1,10 @@
 # [Building an End-to-End MCP Application](https://huggingface.co/learn/mcp-course/unit2/introduction)
 
+## Quickstart
+
+1. [Run the server: `python app.py`](https://huggingface.co/learn/mcp-course/unit2/gradio-server#running-the-server)
+2. The web interface will be available at http://localhost:7860, and the MCP server at http://localhost:7860/gradio_api/mcp/sse.
+
 ## Create & Use custom MCP server with Gradio
 
 Custom MCP servers with Gradio can be [deployed](https://huggingface.co/learn/mcp-course/unit2/gradio-server#deploying-to-hugging-face-spaces) to a remote like [Hugging Face Spaces](huggingface.co/spaces) which will auto-build and host your MCP server. Only needs a file named `app.py` and `requirements.txt` to transform your functions into MCP tools.
