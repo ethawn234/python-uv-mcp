@@ -26,3 +26,6 @@ uv pip install <package>
 - Auto starts when terminal opens
 & C:/Users/obd1/repos/python-uv-mcp/.venv/Scripts/Activate.ps1
 ```
+
+- Install from pyproject.toml
+`uv pip install -r pyproject.toml`
