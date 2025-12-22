@@ -186,6 +186,15 @@ cli = [
 ]
 
 [[package]]
+name = "mcp-remote"
+version = "0.1.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/3f/44/d1d7ef9d4b8fe90bc75fccec21e5bff210bfa7f4ef044c0d0f5de89d68e2/mcp_remote-0.1.0.tar.gz", hash = "sha256:573714142a2d2e3a734e97319687550703a06743a29d495dd4ec73f8aa0c3e7c", size = 595, upload-time = "2025-05-03T01:00:02.93Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/bc/e5/875d4b5bcfcaa343b2f49aacd984e618f85697090c9109a1e555e51e3910/mcp_remote-0.1.0-py3-none-any.whl", hash = "sha256:e51f8c36f06f1041be7039747d3c41c1ffa82a30e451a6998cc8d3a0adc179a8", size = 788, upload-time = "2025-05-03T01:00:01.855Z" },
+]
+
+[[package]]
 name = "mdurl"
 version = "0.1.2"
 source = { registry = "https://pypi.org/simple" }
@@ -284,10 +293,14 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "mcp", extra = ["cli"] },
+    { name = "mcp-remote" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "mcp", extras = ["cli"], specifier = ">=1.13.1" }]
+requires-dist = [
+    { name = "mcp", extras = ["cli"], specifier = ">=1.13.1" },
+    { name = "mcp-remote", specifier = ">=0.1.0" },
+]
 
 [[package]]
 name = "pywin32"
